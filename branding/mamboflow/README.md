@@ -18,6 +18,7 @@ In Good Company is the parent brand. MamboFlow is an endorsed product. It carrie
 | `mascot/mambo-pop-teal.png` | In use everywhere. Black-and-white coat, teal collar, gold charm, transparent background. |
 | `mascot/mambo-pop-{pink,mustard,red}.png` | Alternate collar colors, same charm. |
 | `mascot/mambo-pop-*-sticker.png` | White keyline versions for dark grounds. |
+| `mascot/mambo-peek-up.png`, `mambo-peek-corner.png`, `mambo-head.png`, `mambo-peek-sticker.png` | Poses cut from the drawing: peeking over an edge, peeking in from a corner, head only, die-cut sticker. |
 | `mascot/mambo-classic.png` | Quiet treatment, no color. Documents and print. |
 | `mascot/mambo-ink.png` | Full watercolor shading in grayscale. Large editorial use. |
 | `mascot/mambo-stamp.png` | Pure two-tone. Favicons, sizes under 64 px. |
@@ -32,6 +33,7 @@ In Good Company is the parent brand. MamboFlow is an endorsed product. It carrie
 | `patterns/*.svg`, `patterns/tile-*.png` | Argyle Atomic (coarse and fine), Foyer, Lattice, and the mustard sparkle cell, as scalable SVG and 600 x 600 PNG tiles. |
 | `source/assets.html`, `source/render.js` | The HTML compositions every PNG was rendered from, and the Playwright renderer. |
 | `source/mascot_convert.py`, `source/mascot_pop.py` | Scripts that produced the mascot treatments from the color original. |
+| `board/brand-sheet.png`, `source/sheet.html` | The one-page brand sheet and its source. |
 | `board/index.html` | The brand board (also published as a Claude artifact). |
 | `fonts/` | Bodoni Moda and Inter variable fonts (SIL Open Font License), copied from the In Good Company design system. |
 
