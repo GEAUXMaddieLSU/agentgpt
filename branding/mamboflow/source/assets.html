@@ -143,23 +143,20 @@ img.m{position:absolute;display:block}
 #mobile .lk{position:absolute;left:0;right:0;top:392px}
 #mobile .btn{position:absolute;left:28px;right:28px;height:52px;display:flex;align-items:center;justify-content:center;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:650}
 #mobile .b1{top:520px;background:var(--ink);color:#fff}
-#mobile .b2{top:586px;border:1px solid var(--ink)}
+#mobile .b2{top:586px;border:1px solid var(--ink);background:transparent;color:var(--ink)}
 #mobile .foot{position:absolute;left:0;right:0;top:720px;display:grid;justify-items:center;gap:8px}
 #mobile .foot img{width:16px} #mobile .foot i{display:block;width:1px;height:30px;background:var(--line)}
-/* mobile 2: lockup on top, Mambo and paws over colour half-circles */
+/* mobile 2: peek over the sheet, colour half-circles behind */
 #mobile2{width:390px;height:844px}
-#mobile2 .lk{position:absolute;left:0;right:0;top:110px}
-#mobile2 .tag{position:absolute;left:0;right:0;top:230px;text-align:center;font-family:var(--serif);font-size:20px;color:var(--ink)}
+#mobile2 .lk{position:absolute;left:0;right:0;top:58px}
+#mobile2 .tag{position:absolute;left:0;right:0;top:158px;text-align:center;font-family:var(--serif);font-size:20px;color:var(--ink)}
 #mobile2 .circ{position:absolute;border-radius:50%}
-#mobile2 .dog{position:absolute;left:-10px;bottom:-6px;width:410px}
-#mobile2 .btn{position:absolute;left:28px;right:28px;height:52px;display:flex;align-items:center;justify-content:center;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:650;z-index:2}
-#mobile2 .b1{top:300px;background:var(--ink);color:#fff}
-#mobile2 .b2{top:366px;border:1px solid var(--ink)}
-#lock-square{width:1000px;height:1000px;background:transparent}
-#lock-square .panel{left:260px;top:110px;width:480px;height:540px}
-#lock-square img.m{left:270px;top:80px;width:460px}
-#lock-square .lk{position:absolute;left:70px;top:716px}
-#lock-square .lk .by{left:calc(var(--W)*.27);width:var(--W);text-align:center;padding-left:.34em;box-sizing:border-box;font-size:calc(var(--W)*.03)}
+#mobile2 .head{position:absolute;left:5.8px;top:294.4px;width:378.4px}
+#mobile2 .sheet{position:absolute;left:0;right:0;top:640px;bottom:0;background:var(--paper);border-radius:30px 30px 0 0;border:1px solid var(--line);border-bottom:0}
+#mobile2 .paws{position:absolute;left:5.8px;top:611.2px;width:378.4px}
+#mobile2 .btn{position:absolute;left:28px;right:28px;height:52px;display:flex;align-items:center;justify-content:center;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:650}
+#mobile2 .b1{top:680px;background:var(--ink);color:#fff}
+#mobile2 .b2{top:744px;border:1px solid var(--ink);background:transparent;color:var(--ink)}
 /* pattern tiles 600x600 */
 .tile{width:600px;height:600px}
 </style></head><body>
@@ -237,7 +234,7 @@ img.m{position:absolute;display:block}
 <div class="frame" id="coins"><div><img src="../patterns/spark-mustard.svg"></div><div style="color:#101114"><svg viewBox="-50 -50 100 100"><g stroke="currentColor" stroke-width="3" fill="none"><line x1="-44" y1="0" x2="44" y2="0"/><line x1="0" y1="-44" x2="0" y2="44"/><line x1="-31" y1="-31" x2="31" y2="31"/><line x1="-31" y1="31" x2="31" y2="-31"/></g><g fill="currentColor"><circle cx="44" cy="0" r="5"/><circle cx="-44" cy="0" r="5"/><circle cx="0" cy="44" r="5"/><circle cx="0" cy="-44" r="5"/><circle cx="31" cy="31" r="5"/><circle cx="-31" cy="-31" r="5"/><circle cx="31" cy="-31" r="5"/><circle cx="-31" cy="31" r="5"/><circle r="6"/></g></svg></div><div style="color:#3fa9a6"><svg viewBox="0 0 100 100"><path fill="currentColor" d="M50 2 C62 22 78 38 98 50 C78 62 62 78 50 98 C38 78 22 62 2 50 C22 38 38 22 50 2Z"/></svg></div></div>
 <div class="frame" id="icon-teal"><div class="sq"><img src="../mascot/mambo-cream-head.png" alt=""></div></div>
 <div class="frame" id="mobile"><div class="paper"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="dog" src="../mascot/mambo-cream-peek-paws.png"><div class="wall"></div><div class="lk center" style="--W:270px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div><div class="btn b1">Get started</div><div class="btn b2">Sign in</div><div class="foot"><img src="../patterns/spark-mustard.svg"><i></i></div></div>
-<div class="frame" id="mobile2"><div class="lk center" style="--W:250px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div><div class="tag">Social, in good company.</div><div class="btn b1">Get started</div><div class="btn b2">Sign in</div><div class="circ" style="left:-90px;top:470px;width:300px;height:300px;background:#e2b03a"></div><div class="circ" style="left:170px;top:430px;width:320px;height:320px;background:#e2563f"></div><div class="circ" style="left:60px;top:560px;width:260px;height:260px;background:#3fa9a6"></div><img class="dog" src="../mascot/mambo-cream-peek-paws.png"></div>
+<div class="frame" id="mobile2"><div class="lk center" style="--W:250px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div><div class="tag">Social, in good company.</div><div class="circ" style="left:66px;top:304px;width:270px;height:270px;background:#e2b03a"></div><div class="circ" style="left:-90px;top:414px;width:200px;height:200px;background:#e2563f"></div><div class="circ" style="left:300px;top:384px;width:180px;height:180px;background:#3fa9a6"></div><img class="head" src="../mascot/mambo-peek-head-layer.png" alt=""><div class="sheet"></div><img class="paws" src="../mascot/mambo-peek-paws-layer.png" alt=""><div class="btn b1">Get started</div><div class="btn b2">Sign in</div></div>
 
 <div class="frame" id="lock-square"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-cream.png" alt=""><div class="lk" style="--W:660px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div></div>
 <!-- Pattern tiles -->

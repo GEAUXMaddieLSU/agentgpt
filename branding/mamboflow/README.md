@@ -16,7 +16,8 @@ In Good Company is the parent brand. MamboFlow is an endorsed product. It carrie
 | Path | What it is |
 | --- | --- |
 | `mascot/mambo-cream.png` | In use everywhere. The original art, trimmed, transparent background. |
-| `mascot/mambo-cream-sticker.png`, `mambo-cream-excited.png`, `mambo-cream-excited-sticker.png`, `mambo-cream-head.png`, `mambo-cream-peek-corner.png`, `mambo-cream-peek-paws.png`, `mambo-cream-peek-ledge.png` | Poses cut from the drawing: sticker, excited, head, corner peek, peek with paws (use only where a ledge hides the seam), peek on a paper ledge. |
+| `mascot/mambo-cream-sticker.png`, `mambo-cream-excited.png`, `mambo-cream-excited-sticker.png`, `mambo-cream-head.png`, `mambo-cream-peek-corner.png`, `mambo-cream-peek-ledge.png`, `mambo-cream-peek-sticker.png` | Poses cut from the drawing: sticker, excited, head, corner peek, and the peek over a paper ledge with his own paws resting on it (with a die-cut sticker version). |
+| `mascot/mambo-peek-head-layer.png`, `mambo-peek-paws-layer.png` | The peek as two layers, head and paws, so a layout can put its own ledge or button sheet between them. The paws layer is positioned from the head layer's top-left at the offset used in `source/assets.html`. |
 | `wordmark/mamboflow-script-black.png`, `-white.png`, `swoosh-teal.svg` | The script wordmark as artwork, lifted from Maddie's reference and cleaned; black and white; the optional teal swoosh. Not a font. Trace to vector before large print. |
 | `mascot/mambo-pop-teal.png` | Black-and-white coat with the teal collar and gold charm. Quiet alternate. |
 | `mascot/mambo-pop-{pink,mustard,red}.png` | Alternate collar colors, same charm. |
@@ -32,7 +33,7 @@ In Good Company is the parent brand. MamboFlow is an endorsed product. It carrie
 | `social/post-quote.png`, `post-announce.png` | Post templates, 1080 x 1080. Headlines are placeholder copy. |
 | `app/icon-teal.png`, `icon.png`, `icon-dark.png`, `fav.png` | App icon on Collar Teal (in use), paper and ink alternates, favicon source. |
 | `app/card.png`, `card-back.png`, `coins.png` | Business card front and back, 3.5 x 2 in at 300 dpi, and the three glyph coins. |
-| `app/mobile-welcome.png`, `mobile-color.png` | Two mobile welcome screens, 390 x 844. |
+| `app/mobile-welcome.png`, `mobile-color.png` | Two mobile welcome screens, 390 x 844: the paper version, and the peek version with Mambo over the button sheet and color half-circles. |
 | `app/signin.png` | Sign-in screen mockup, 1440 x 900. |
 | `app/sig.png` | Email signature strip, 600 x 140. |
 | `patterns/*.svg`, `patterns/tile-*.png` | Argyle Atomic (coarse and fine), Foyer, Lattice, and the mustard sparkle cell, as scalable SVG and 600 x 600 PNG tiles. |
