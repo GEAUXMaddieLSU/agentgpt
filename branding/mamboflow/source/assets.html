@@ -20,9 +20,9 @@ img.m{position:absolute;display:block}
 /* the panel: a framed piece of the argyle atomic paper, bordered in paper white like the ceiling's trim */
 .panel{position:absolute;overflow:hidden;background:var(--paper);border:6px solid var(--paper);outline:1px solid var(--line)}
 .panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.slot{position:absolute;display:flex;align-items:center;gap:12px;font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.slot i{display:block;width:46px;height:54px;border:1px dashed rgba(16,17,20,.4)}
-.ink .slot{color:rgba(255,255,255,.72)} .ink .slot i{border-color:rgba(255,255,255,.4)}
+.endorse{position:absolute;display:flex;align-items:center;gap:18px}
+.endorse img{display:block;height:64px;width:auto}
+.endorse .by{position:static!important}
 
 /* avatar 400 */
 #avatar,#avatar-dark{width:400px;height:400px}
@@ -37,7 +37,9 @@ img.m{position:absolute;display:block}
 #fav img{position:absolute;width:184px;left:-12px;top:8px}
 /* X header 1500x500 */
 #header{width:1500px;height:500px}
-#header .by{position:absolute;left:110px;top:70px;font-size:14px;color:var(--muted)}
+#header .endorse{left:110px;top:56px;gap:14px}
+#header .endorse img{height:44px}
+#header .by{font-size:14px;color:var(--muted)}
 #header .wm{position:absolute;left:104px;top:112px;font-size:162px}
 #header .tag{position:absolute;left:400px;top:378px;font-family:var(--serif);font-style:italic;font-size:34px;letter-spacing:-.01em;color:var(--ink)}
 #header .rule{left:400px;right:560px;top:356px}
@@ -48,20 +50,20 @@ img.m{position:absolute;display:block}
 #lock-primary .panel{left:0;top:30px;width:330px;height:360px}
 #lock-primary img.m{left:8px;top:8px;width:316px}
 #lock-primary .wm{position:absolute;left:380px;top:72px;font-size:172px}
-#lock-primary .by{position:absolute;left:386px;top:268px;font-size:17px;color:var(--ink)}
-#lock-primary .slot{left:386px;top:310px}
+#lock-primary .endorse{left:386px;top:262px}
+#lock-primary .by{font-size:17px;color:var(--ink)}
 #lock-stacked{width:960px;height:760px;background:transparent}
 #lock-stacked .panel{left:300px;top:0;width:360px;height:380px}
 #lock-stacked img.m{left:340px;top:4px;width:280px}
 #lock-stacked .wm{position:absolute;left:0;right:0;top:424px;text-align:center;font-size:150px;white-space:nowrap}
-#lock-stacked .by{position:absolute;left:0;right:0;top:590px;text-align:center;font-size:16px;color:var(--ink)}
-#lock-stacked .slot{left:0;right:0;top:630px;justify-content:center}
+#lock-stacked .endorse{left:0;right:0;top:586px;justify-content:center}
+#lock-stacked .by{font-size:16px;color:var(--ink)}
 #lock-rev{width:1420px;height:420px}
 #lock-rev .panel{left:0;top:30px;width:330px;height:360px}
 #lock-rev img.m{left:8px;top:8px;width:316px}
 #lock-rev .wm{position:absolute;left:380px;top:72px;font-size:172px;color:#fff}
-#lock-rev .by{position:absolute;left:386px;top:268px;font-size:17px;color:#fff}
-#lock-rev .slot{left:386px;top:310px}
+#lock-rev .endorse{left:386px;top:262px}
+#lock-rev .by{font-size:17px;color:#fff}
 /* social post 1080 quote (paper, panel) */
 #post-quote{width:1080px;height:1080px}
 #post-quote .eb-top{position:absolute;left:84px;top:84px}
@@ -92,6 +94,8 @@ img.m{position:absolute;display:block}
 #signin .wmsm .mini img.m{width:104px;left:-8px;top:2px}
 #signin .wmsm .wm{font-size:44px}
 #signin .wmsm .by{font-size:10px;letter-spacing:.2em;color:var(--muted);margin-top:4px}
+#signin .wmsm .endorse{position:static;gap:8px;margin-top:4px}
+#signin .wmsm .endorse img{height:22px}
 .field{display:grid;gap:8px}
 .field label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:650}
 .field div{border-bottom:1px solid var(--ink);padding:12px 0;font-size:17px;color:var(--muted)}
@@ -104,6 +108,8 @@ img.m{position:absolute;display:block}
 #sig .mini img.m{width:122px;left:-9px;top:3px}
 #sig .wm{font-size:44px}
 #sig .by{font-size:10px;color:var(--muted);margin-top:6px}
+#sig .endorse{position:static;gap:8px;margin-top:6px}
+#sig .endorse img{height:22px}
 #sig .meta{margin-left:auto;text-align:right;font-size:11px;line-height:1.6;letter-spacing:.06em;color:var(--muted)}
 /* pattern tiles 600x600 */
 .tile{width:600px;height:600px}
@@ -119,7 +125,7 @@ img.m{position:absolute;display:block}
 
 <!-- X header -->
 <div class="frame" id="header">
- <p class="by">By In Good Company</p>
+ <div class="endorse"><img src="../igc/igc-mark-black.png" alt=""><p class="by">By In Good Company</p></div>
  <h1 class="wm">Mambo<em>Flow</em></h1>
  <div class="rule"></div>
  <p class="tag">Social, in good company.</p>
@@ -128,9 +134,9 @@ img.m{position:absolute;display:block}
 </div>
 
 <!-- Lockups -->
-<div class="frame" id="lock-primary"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-pop-teal.png" alt=""><h1 class="wm">Mambo<em>Flow</em></h1><p class="by">By In Good Company</p><div class="slot"><i></i><span>IGC mark</span></div></div>
-<div class="frame" id="lock-stacked"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-pop-teal.png" alt=""><h1 class="wm">Mambo<em>Flow</em></h1><p class="by">By In Good Company</p><div class="slot"><i></i><span>IGC mark</span></div></div>
-<div class="frame ink" id="lock-rev"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-pop-teal.png" alt=""><h1 class="wm">Mambo<em>Flow</em></h1><p class="by">By In Good Company</p><div class="slot"><i></i><span>IGC mark</span></div></div>
+<div class="frame" id="lock-primary"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-pop-teal.png" alt=""><h1 class="wm">Mambo<em>Flow</em></h1><div class="endorse"><img src="../igc/igc-mark-black.png" alt=""><p class="by">By In Good Company</p></div></div>
+<div class="frame" id="lock-stacked"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-pop-teal.png" alt=""><h1 class="wm">Mambo<em>Flow</em></h1><div class="endorse"><img src="../igc/igc-mark-black.png" alt=""><p class="by">By In Good Company</p></div></div>
+<div class="frame ink" id="lock-rev"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-pop-teal.png" alt=""><h1 class="wm">Mambo<em>Flow</em></h1><div class="endorse"><img src="../igc/igc-mark-white.png" alt=""><p class="by">By In Good Company</p></div></div>
 
 <!-- Social post: quote card -->
 <div class="frame" id="post-quote">
@@ -163,7 +169,7 @@ img.m{position:absolute;display:block}
  </div>
  <div class="right">
   <div class="form">
-   <div class="wmsm"><div class="mini"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-pop-teal.png" alt=""></div><div><h3 class="wm">Mambo<em>Flow</em></h3><p class="by">By In Good Company</p></div></div>
+   <div class="wmsm"><div class="mini"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-pop-teal.png" alt=""></div><div><h3 class="wm">Mambo<em>Flow</em></h3><div class="endorse"><img src="../igc/igc-mark-black.png" alt=""><p class="by">By In Good Company</p></div></div></div>
    <div class="field"><label>Email</label><div>maddie@igcimpactstudio.com</div></div>
    <div class="field"><label>Password</label><div>••••••••••</div></div>
    <div><span class="btn">Sign in <span>→</span></span></div>
@@ -173,7 +179,7 @@ img.m{position:absolute;display:block}
 </div>
 
 <!-- Email signature strip -->
-<div class="frame" id="sig"><div class="mini"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-pop-teal.png" alt=""></div><div><h3 class="wm">Mambo<em>Flow</em></h3><p class="by">By In Good Company</p></div><div class="meta">Maddie Brown · Founder and Principal<br>In Good Company Impact Studio<br>Maddie@igcimpactstudio.com</div></div>
+<div class="frame" id="sig"><div class="mini"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-pop-teal.png" alt=""></div><div><h3 class="wm">Mambo<em>Flow</em></h3><div class="endorse"><img src="../igc/igc-mark-black.png" alt=""><p class="by">By In Good Company</p></div></div><div class="meta">Maddie Brown · Founder and Principal<br>In Good Company Impact Studio<br>Maddie@igcimpactstudio.com</div></div>
 
 <!-- Pattern tiles -->
 <div class="frame tile" id="tile-signal"><svg class="pat" viewBox="0 0 600 600" fill="none" stroke="#101114" stroke-opacity=".38"><circle cx="300" cy="300" r="60"/><circle cx="300" cy="300" r="120"/><circle cx="300" cy="300" r="180"/><circle cx="300" cy="300" r="240"/><circle cx="300" cy="300" r="300"/><circle cx="300" cy="300" r="360"/></svg></div>

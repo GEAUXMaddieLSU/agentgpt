@@ -4,7 +4,7 @@ MamboFlow is the In Good Company Impact Studio product for getting social. This 
 
 ## Brand architecture
 
-In Good Company is the parent brand. MamboFlow is an endorsed product. It carries the line "By In Good Company" and the studio's circle mark on every surface, inherits the studio's type and palette, and adds:
+In Good Company is the parent brand. MamboFlow is an endorsed product. It carries the studio's circle mark beside the line "By In Good Company" on every surface, inherits the studio's type and palette, and adds:
 
 1. Mambo, the French bulldog mascot. Coat always black and white. Collar teal. Charm gold.
 2. The argyle atomic panel: a framed piece of Maddie's ceiling wallpaper behind Mambo. The only place the full palette lives.
@@ -22,7 +22,7 @@ In Good Company is the parent brand. MamboFlow is an endorsed product. It carrie
 | `mascot/mambo-classic.png` | Quiet treatment, no color. Documents and print. |
 | `mascot/mambo-ink.png` | Full watercolor shading in grayscale. Large editorial use. |
 | `mascot/mambo-stamp.png` | Pure two-tone. Favicons, sizes under 64 px. |
-| `lockups/lock-primary.png`, `lock-stacked.png` | Transparent lockups with the panel, wordmark, endorsement, and the dashed slot for the IGC mark. |
+| `lockups/lock-primary.png`, `lock-stacked.png` | Transparent lockups: the panel, Mambo, wordmark, and the In Good Company mark beside the endorsement line. |
 | `lockups/lock-rev.png` | Reversed lockup on ink. |
 | `social/avatar.png`, `avatar-dark.png` | Profile avatars, 400 x 400. |
 | `social/header.png` | X header, 1500 x 500. |
@@ -33,6 +33,9 @@ In Good Company is the parent brand. MamboFlow is an endorsed product. It carrie
 | `patterns/*.svg`, `patterns/tile-*.png` | Argyle Atomic (coarse and fine), Foyer, Lattice, and the mustard sparkle cell, as scalable SVG and 600 x 600 PNG tiles. |
 | `source/assets.html`, `source/render.js` | The HTML compositions every PNG was rendered from, and the Playwright renderer. |
 | `source/mascot_convert.py`, `source/mascot_pop.py` | Scripts that produced the mascot treatments from the color original. |
+| `igc/` | The In Good Company mark and lockup as supplied, on transparent grounds: black and white, square-padded, and sized 512 to 16 px. Never redrawn. |
+| `app/mobile-welcome.png`, `source/mobile.html` | Mobile welcome screen, 390 x 844 at 2x. |
+| `board/igc-variations.png`, `source/igcvar.html` | The emblem variations sheet and its source. |
 | `board/brand-sheet.png`, `source/sheet.html` | The one-page brand sheet and its source. |
 | `board/index.html` | The brand board (also published as a Claude artifact). |
 | `fonts/` | Bodoni Moda and Inter variable fonts (SIL Open Font License), copied from the In Good Company design system. |
@@ -41,7 +44,7 @@ In Good Company is the parent brand. MamboFlow is an endorsed product. It carrie
 
 - Mambo's coat is black and white. The collar is the only color on him; the charm is always gold.
 - The paper appears only inside a framed panel behind Mambo, bordered in paper white with a hairline edge. He overlaps its edges. Never tile it behind type.
-- Lockup order never changes: Mambo and panel, wordmark, endorsement line, IGC mark.
+- Lockup order never changes: Mambo and panel, wordmark, then the IGC mark beside the endorsement line. The mark is black on light grounds, white on ink, never recolored, never inside the paper, never below 16 px.
 - Wordmark: Bodoni Moda 500, tracking -0.035em, "Mambo" upright and "Flow" italic.
 - Endorsement: Inter 650, uppercase, 0.24em tracking. Legal name in contracts and footers: In Good Company Impact Studio, LLC.
 - Clear space equals the height of the capital M on every side. Minimum primary lockup width on screen: 220 px.
@@ -50,12 +53,13 @@ In Good Company is the parent brand. MamboFlow is an endorsed product. It carrie
 
 ## Confirmed
 
+- The In Good Company mark: supplied by Maddie on October 14, 2026, and set beside the endorsement line everywhere.
+
 - Endorsement wording: "MamboFlow by In Good Company" (October 14, 2026).
 - The color pop: argyle atomic panel behind Mambo, teal collar, gold charm (October 14, 2026).
 
 ## Pending
 
-- The In Good Company circle mark. Not readable from the design system's asset store or Maddie's computer in this session. It drops into the dashed slot in every lockup once the PNG is shared. [CONFIRM]
 - Paper colors were sampled by eye from photographs; confirm against the roll. [CONFIRM]
 - Headlines on the post templates are placeholder copy. [CONFIRM]
 
