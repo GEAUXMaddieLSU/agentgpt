@@ -1,0 +1,245 @@
+<!doctype html><html><head><meta charset="utf-8"><title>MamboFlow asset frames</title>
+<style>
+@font-face{font-family:"Bodoni Moda";src:url(../fonts/BodoniModa-Variable.ttf);font-weight:400 900;font-style:normal}
+@font-face{font-family:"Bodoni Moda";src:url(../fonts/BodoniModa-Italic-Variable.ttf);font-weight:400 900;font-style:italic}
+@font-face{font-family:Inter;src:url(../fonts/Inter-Variable.ttf);font-weight:100 900}
+:root{--paper:#fbfbf8;--soft:#f0f0ec;--stone:#e7e7e2;--ink:#101114;--muted:#5f6166;--line:rgba(16,17,20,.22);--on-ink:#fff;--mambo:#e2b03a;--serif:"Bodoni Moda",Didot,Georgia,serif;--sans:Inter,"Segoe UI",system-ui,sans-serif}
+body{margin:0;background:#888;font-family:var(--sans);color:var(--ink)}
+.frame{position:relative;overflow:hidden;background:var(--paper);margin:24px}
+.frame.ink{background:var(--ink);color:var(--on-ink)}
+.wm{font-family:var(--serif);font-weight:500;letter-spacing:-.035em;line-height:.9;margin:0}
+.wm em{font-style:italic;font-weight:500}
+.by{font-family:var(--sans);font-weight:650;text-transform:uppercase;letter-spacing:.24em;line-height:1.3;margin:0}
+.eyebrow{font-family:var(--sans);font-weight:650;text-transform:uppercase;letter-spacing:.24em;font-size:13px;color:var(--muted)}
+.ink .eyebrow{color:rgba(255,255,255,.72)}
+.h{font-family:var(--serif);font-weight:500;letter-spacing:-.03em;line-height:.96;margin:0}
+svg.pat,img.pat{position:absolute;inset:0;width:100%;height:100%}
+img.m{position:absolute;display:block}
+.rule{position:absolute;height:1px;background:var(--line)}
+.ink .rule{background:rgba(255,255,255,.22)}
+/* the panel: a framed piece of the argyle atomic paper, bordered in paper white like the ceiling's trim */
+.panel{position:absolute;overflow:hidden;background:var(--paper);border:6px solid var(--paper);outline:1px solid var(--line)}
+.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.endorse{position:absolute;display:flex;align-items:center;gap:18px}
+.endorse img{display:block;height:64px;width:auto}
+.endorse .by{position:static!important}
+/* the lockup component: In Good Company mark + the script wordmark artwork + endorsement, every measure from --W (wordmark width) */
+.lk{--W:400px;position:relative;width:calc(var(--W)*1.32);height:calc(var(--W)*.31)}
+.lk .mk{position:absolute;left:0;top:calc(var(--W)*.038);height:calc(var(--W)*.233);width:auto}
+.lk .wmi{position:absolute;left:calc(var(--W)*.27);top:0;width:var(--W)}
+.lk .by{position:absolute!important;left:calc(var(--W)*.35);top:calc(var(--W)*.275);margin:0;font-family:var(--serif);font-weight:500;font-size:calc(var(--W)*.027);letter-spacing:.34em;text-transform:uppercase;white-space:nowrap;color:inherit}
+.lk .sp{position:absolute;left:calc(var(--W)*1.245);top:calc(var(--W)*-.02);width:calc(var(--W)*.075)}
+.lk .sw{position:absolute;left:calc(var(--W)*.30);top:calc(var(--W)*.228);width:calc(var(--W)*.94)}
+.lk.center{margin:0 auto}
+
+
+/* avatar 400 */
+#avatar,#avatar-dark{width:400px;height:400px}
+#avatar .panel,#avatar-dark .panel{left:28px;top:28px;width:344px;height:344px;border-width:5px}
+#avatar img.m,#avatar-dark img.m{width:580px;left:-40px;top:14px}
+/* app icon 512 */
+#icon,#icon-dark{width:512px;height:512px}
+#icon .panel,#icon-dark .panel{left:28px;top:28px;width:456px;height:456px}
+#icon img.m,#icon-dark img.m{width:720px;left:-40px;top:40px}
+/* favicon source 128 */
+#fav{width:128px;height:128px}
+#fav img{position:absolute;width:184px;left:-12px;top:8px}
+/* X header 1500x500 */
+#header{width:1500px;height:500px}
+#header .lk{position:absolute;left:96px;top:124px}
+#header .tag{position:absolute;left:400px;top:380px;font-family:var(--serif);font-style:italic;font-size:34px;letter-spacing:-.01em;color:var(--ink)}
+#header .rule{left:400px;right:560px;top:356px}
+#header .panel{left:1040px;top:46px;width:400px;height:454px}
+#header img.m{right:36px;bottom:-34px;width:400px}
+/* lockups */
+/* social post 1080 quote (paper, panel) */
+#post-quote{width:1080px;height:1080px}
+#post-quote .eb-top{position:absolute;left:84px;top:84px}
+#post-quote .h{position:absolute;left:80px;top:180px;width:560px;font-size:118px}
+#post-quote .panel{left:590px;top:480px;width:460px;height:560px}
+#post-quote img.m{right:-30px;bottom:-70px;width:540px}
+#post-quote .foot{position:absolute;left:84px;bottom:76px;font-size:12px}
+#post-quote .rule{left:84px;width:420px;bottom:120px}
+/* social post 1080 announce (dark, foyer) */
+#post-announce{width:1080px;height:1080px}
+#post-announce .eb-top{position:absolute;left:84px;top:84px}
+#post-announce .h{position:absolute;left:80px;top:160px;width:520px;font-size:140px;color:#fff}
+#post-announce img.m{right:-20px;bottom:-60px;width:560px}
+#post-announce .foot{position:absolute;left:84px;bottom:76px;font-size:12px;color:#fff}
+#post-announce .fade{position:absolute;inset:0;background:linear-gradient(90deg,#101114 0%,rgba(16,17,20,.9) 40%,rgba(16,17,20,.3) 100%)}
+/* sign-in 1440x900 */
+#signin{width:1440px;height:900px;display:flex}
+#signin .left{position:relative;width:620px;height:100%;background:var(--ink);color:#fff;overflow:hidden}
+#signin .left .fade{position:absolute;inset:0;background:linear-gradient(180deg,#101114 0%,rgba(16,17,20,.85) 40%,rgba(16,17,20,.35) 100%)}
+#signin .left .h{position:absolute;left:64px;top:84px;font-size:86px;color:#fff;width:520px}
+#signin .left .eyebrow{position:absolute;left:66px;top:48px;color:rgba(255,255,255,.72)}
+#signin .left img.m{left:170px;bottom:-50px;width:400px}
+#signin .right{position:relative;flex:1;height:100%;background:var(--paper)}
+#signin .form{position:absolute;left:120px;top:180px;width:420px;display:grid;gap:30px}
+#signin .wmsm{display:flex;align-items:center;gap:18px}
+#signin .wmsm .mini{position:relative;width:72px;height:72px;flex:none}
+#signin .wmsm .mini .panel{left:4px;top:4px;width:64px;height:64px;border-width:2px}
+#signin .wmsm .mini img.m{width:104px;left:-8px;top:2px}
+#signin .wmsm .wm{font-size:44px}
+.field{display:grid;gap:8px}
+.field label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:650}
+.field div{border-bottom:1px solid var(--ink);padding:12px 0;font-size:17px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:52px;padding:0 26px;background:var(--ink);color:#fff;font-size:14px;letter-spacing:.13em;text-transform:uppercase;font-weight:650}
+#signin .foot{position:absolute;left:120px;bottom:48px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+/* email signature strip 600x140 */
+#sig{width:600px;height:140px;display:flex;align-items:center;gap:22px;padding:0 24px;box-sizing:border-box;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+#sig .mini{position:relative;width:84px;height:84px;flex:none}
+#sig .mini .panel{left:4px;top:4px;width:76px;height:76px;border-width:3px}
+#sig .mini img.m{width:122px;left:-9px;top:3px}
+#sig .wm{font-size:44px}
+#sig .meta{margin-left:auto;text-align:right;font-size:9.5px;line-height:1.55;letter-spacing:.03em;color:var(--muted);max-width:170px}
+#lock-primary{width:1600px;height:520px;background:transparent}
+#lock-primary .panel{left:0;top:60px;width:340px;height:400px}
+#lock-primary img.m{left:10px;top:30px;width:330px}
+#lock-primary .lk{position:absolute;left:396px;top:104px}
+#lock-rev{width:1600px;height:520px}
+#lock-rev .panel{left:0;top:60px;width:340px;height:400px}
+#lock-rev img.m{left:10px;top:30px;width:330px}
+#lock-rev .lk{position:absolute;left:396px;top:104px;color:#fff}
+#lock-stacked{width:1000px;height:900px;background:transparent}
+#lock-stacked .panel{left:320px;top:40px;width:360px;height:420px}
+#lock-stacked img.m{left:330px;top:14px;width:340px}
+#lock-stacked .lk{position:absolute;left:78px;top:540px}
+#lock-swoosh{width:1600px;height:520px;background:transparent}
+#lock-swoosh .panel{left:0;top:60px;width:340px;height:400px}
+#lock-swoosh img.m{left:10px;top:30px;width:330px}
+#lock-swoosh .lk{position:absolute;left:396px;top:104px}
+#lock-swoosh .lk .sw{top:calc(var(--W)*.205)}
+#lock-swoosh .lk .by{top:calc(var(--W)*.30)}
+/* badge: capsule with mark, divider, script */
+#lock-pill{width:1200px;height:360px;background:transparent}
+#lock-pill .pill{position:absolute;inset:20px;border:1.5px solid var(--ink);border-radius:160px}
+#lock-pill .mk{position:absolute;left:110px;top:95px;height:170px}
+#lock-pill .div{position:absolute;left:330px;top:90px;width:1px;height:180px;background:var(--line)}
+#lock-pill .lk{position:absolute;left:380px;top:96px}
+#lock-pill .lk .mk{display:none} #lock-pill .lk .wmi{left:0} #lock-pill .lk .by{left:calc(var(--W)*.08)} #lock-pill .lk .sp{left:calc(var(--W)*1.0)}
+/* business card 3.5 x 2 in at 300 dpi */
+#card{width:1050px;height:600px}
+#card img.pat{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#card .plate{position:absolute;left:60px;top:60px;width:580px;height:300px;background:var(--paper);border:1px solid var(--line)}
+#card .lk{position:absolute;left:96px;top:118px}
+#card .meta{position:absolute;left:96px;top:420px;font-size:14px;line-height:1.6;letter-spacing:.06em;color:var(--ink);background:var(--paper);padding:10px 14px;border:1px solid var(--line)}
+#card img.m{position:absolute;right:-50px;bottom:-30px;width:400px}
+#card-back{width:1050px;height:600px;background:var(--ink)}
+#card-back .lk{position:absolute;left:300px;top:200px;color:#fff}
+#coins{width:720px;height:240px;display:flex;align-items:center;justify-content:center;gap:40px}
+#coins div{width:180px;height:180px;border-radius:50%;background:var(--paper);border:1px solid var(--line);display:grid;place-items:center}
+#coins svg,#coins img{width:44%;height:44%}
+/* app icon on teal, rounded like the phone draws it */
+#icon-teal{width:512px;height:512px;background:transparent}
+#icon-teal .sq{position:absolute;inset:0;background:#3fa9a6;border-radius:112px;overflow:hidden}
+#icon-teal img{position:absolute;width:640px;left:-60px;top:30px}
+/* mobile: lockup under Mambo */
+#mobile{width:390px;height:844px}
+#mobile .paper{position:absolute;left:0;top:0;width:100%;height:360px;overflow:hidden}
+#mobile .paper img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#mobile .dog{position:absolute;left:40px;top:84px;width:320px}
+#mobile .wall{position:absolute;left:-120px;right:-120px;top:318px;height:700px;background:var(--paper);border-radius:50% 50% 0 0 / 170px 170px 0 0}
+#mobile .lk{position:absolute;left:0;right:0;top:392px}
+#mobile .btn{position:absolute;left:28px;right:28px;height:52px;display:flex;align-items:center;justify-content:center;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:650}
+#mobile .b1{top:520px;background:var(--ink);color:#fff}
+#mobile .b2{top:586px;border:1px solid var(--ink);background:transparent;color:var(--ink)}
+#mobile .foot{position:absolute;left:0;right:0;top:720px;display:grid;justify-items:center;gap:8px}
+#mobile .foot img{width:16px} #mobile .foot i{display:block;width:1px;height:30px;background:var(--line)}
+/* mobile 2: peek over the sheet, colour half-circles behind */
+#mobile2{width:390px;height:844px}
+#mobile2 .lk{position:absolute;left:0;right:0;top:58px}
+#mobile2 .tag{position:absolute;left:0;right:0;top:158px;text-align:center;font-family:var(--serif);font-size:20px;color:var(--ink)}
+#mobile2 .circ{position:absolute;border-radius:50%}
+#mobile2 .head{position:absolute;left:5.8px;top:294.4px;width:378.4px}
+#mobile2 .sheet{position:absolute;left:0;right:0;top:640px;bottom:0;background:var(--paper);border-radius:30px 30px 0 0;border:1px solid var(--line);border-bottom:0}
+#mobile2 .paws{position:absolute;left:5.8px;top:611.2px;width:378.4px}
+#mobile2 .btn{position:absolute;left:28px;right:28px;height:52px;display:flex;align-items:center;justify-content:center;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:650}
+#mobile2 .b1{top:680px;background:var(--ink);color:#fff}
+#mobile2 .b2{top:744px;border:1px solid var(--ink);background:transparent;color:var(--ink)}
+/* pattern tiles 600x600 */
+.tile{width:600px;height:600px}
+</style></head><body>
+
+<!-- X avatar -->
+<div class="frame" id="avatar"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-cream.png" alt=""></div>
+<div class="frame ink" id="avatar-dark"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-cream.png" alt=""></div>
+<!-- App icon -->
+<div class="frame" id="icon"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-cream.png" alt=""></div>
+<div class="frame ink" id="icon-dark"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-cream.png" alt=""></div>
+<div class="frame" id="fav"><img src="../mascot/mambo-stamp.png" alt=""></div>
+
+<!-- X header -->
+<div class="frame" id="header">
+ <div class="lk" style="--W:602px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div>
+ <div class="rule"></div>
+ <p class="tag">Social, in good company.</p>
+ <div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div>
+ <img class="m" src="../mascot/mambo-cream.png" alt="">
+</div>
+
+<!-- Lockups -->
+<div class="frame" id="lock-primary"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-cream.png" alt=""><div class="lk" style="--W:900px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div></div>
+<div class="frame" id="lock-stacked"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-cream.png" alt=""><div class="lk" style="--W:640px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div></div>
+<div class="frame ink" id="lock-rev"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-cream.png" alt=""><div class="lk" style="--W:900px"><img class="mk" src="../igc/igc-mark-white.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-white.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div></div>
+
+<!-- Social post: quote card -->
+<div class="frame" id="post-quote">
+ <div class="eyebrow eb-top">MamboFlow · By In Good Company</div>
+ <h2 class="h">Social, in good company.</h2>
+ <div class="rule"></div>
+ <div class="foot eyebrow">igcimpactstudio.com</div>
+ <div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div>
+ <img class="m" src="../mascot/mambo-cream.png" alt="">
+</div>
+
+<!-- Social post: announcement (dark, Foyer) -->
+<div class="frame ink" id="post-announce">
+ <img class="pat" src="../patterns/tile-foyer.svg" style="opacity:.6">
+ <div class="fade"></div>
+ <div class="eyebrow eb-top">New from In Good Company</div>
+ <h2 class="h">Meet<br>Mambo.</h2>
+ <div class="foot eyebrow">MamboFlow · By In Good Company</div>
+ <img class="m" src="../mascot/mambo-cream-sticker.png" alt="">
+</div>
+
+<!-- Sign-in screen -->
+<div class="frame" id="signin">
+ <div class="left">
+  <img class="pat" src="../patterns/tile-foyer.svg" style="opacity:.55;object-fit:cover">
+  <div class="fade"></div>
+  <div class="eyebrow">MamboFlow</div>
+  <h2 class="h">Welcome back. Ready to get social?</h2>
+  <img class="m" src="../mascot/mambo-cream-sticker.png" alt="">
+ </div>
+ <div class="right">
+  <div class="form">
+   <div class="wmsm"><div class="mini"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-cream.png" alt=""></div><div class="lk" style="--W:224px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div></div>
+   <div class="field"><label>Email</label><div>maddie@igcimpactstudio.com</div></div>
+   <div class="field"><label>Password</label><div>••••••••••</div></div>
+   <div><span class="btn">Sign in <span>→</span></span></div>
+  </div>
+  <div class="foot">© 2026 In Good Company Impact Studio, LLC · MamboFlow</div>
+ </div>
+</div>
+
+<!-- Email signature strip -->
+<div class="frame" id="sig"><div class="mini"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-cream.png" alt=""></div><div class="lk" style="--W:163px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div><div class="meta">Maddie Brown<br>Founder and Principal<br>In Good Company Impact Studio<br>Maddie@igcimpactstudio.com</div></div>
+
+
+<div class="frame" id="lock-swoosh"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-cream.png" alt=""><div class="lk" style="--W:900px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><img class="sw" src="../wordmark/swoosh-teal.svg" alt=""><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div></div>
+<div class="frame" id="lock-pill"><div class="pill"></div><img class="mk" src="../igc/igc-mark-black.png" alt=""><div class="div"></div><div class="lk" style="--W:560px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div></div>
+<div class="frame" id="card"><img class="pat" src="../patterns/argyle-atomic-fine.svg"><div class="plate"></div><div class="lk" style="--W:380px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div><div class="meta">Maddie Brown · Founder and Principal · Maddie@igcimpactstudio.com</div><img class="m" src="../mascot/mambo-cream-peek-corner.png" alt=""></div>
+<div class="frame ink" id="card-back"><div class="lk" style="--W:360px"><img class="mk" src="../igc/igc-mark-white.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-white.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div></div>
+<div class="frame" id="coins"><div><img src="../patterns/spark-mustard.svg"></div><div style="color:#101114"><svg viewBox="-50 -50 100 100"><g stroke="currentColor" stroke-width="3" fill="none"><line x1="-44" y1="0" x2="44" y2="0"/><line x1="0" y1="-44" x2="0" y2="44"/><line x1="-31" y1="-31" x2="31" y2="31"/><line x1="-31" y1="31" x2="31" y2="-31"/></g><g fill="currentColor"><circle cx="44" cy="0" r="5"/><circle cx="-44" cy="0" r="5"/><circle cx="0" cy="44" r="5"/><circle cx="0" cy="-44" r="5"/><circle cx="31" cy="31" r="5"/><circle cx="-31" cy="-31" r="5"/><circle cx="31" cy="-31" r="5"/><circle cx="-31" cy="31" r="5"/><circle r="6"/></g></svg></div><div style="color:#3fa9a6"><svg viewBox="0 0 100 100"><path fill="currentColor" d="M50 2 C62 22 78 38 98 50 C78 62 62 78 50 98 C38 78 22 62 2 50 C22 38 38 22 50 2Z"/></svg></div></div>
+<div class="frame" id="icon-teal"><div class="sq"><img src="../mascot/mambo-cream-head.png" alt=""></div></div>
+<div class="frame" id="mobile"><div class="paper"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="dog" src="../mascot/mambo-cream-peek-paws.png"><div class="wall"></div><div class="lk center" style="--W:270px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div><div class="btn b1">Get started</div><div class="btn b2">Sign in</div><div class="foot"><img src="../patterns/spark-mustard.svg"><i></i></div></div>
+<div class="frame" id="mobile2"><div class="lk center" style="--W:250px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div><div class="tag">Social, in good company.</div><div class="circ" style="left:66px;top:304px;width:270px;height:270px;background:#e2b03a"></div><div class="circ" style="left:-90px;top:414px;width:200px;height:200px;background:#e2563f"></div><div class="circ" style="left:300px;top:384px;width:180px;height:180px;background:#3fa9a6"></div><img class="head" src="../mascot/mambo-peek-head-layer.png" alt=""><div class="sheet"></div><img class="paws" src="../mascot/mambo-peek-paws-layer.png" alt=""><div class="btn b1">Get started</div><div class="btn b2">Sign in</div></div>
+
+<div class="frame" id="lock-square"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-cream.png" alt=""><div class="lk" style="--W:660px"><img class="mk" src="../igc/igc-mark-black.png" alt=""><img class="wmi" src="../wordmark/mamboflow-script-black.png" alt="MamboFlow"><p class="by">By In Good Company</p><img class="sp" src="../patterns/spark-mustard.svg" alt=""></div></div>
+<!-- Pattern tiles -->
+<div class="frame tile" id="tile-signal"><svg class="pat" viewBox="0 0 600 600" fill="none" stroke="#101114" stroke-opacity=".38"><circle cx="300" cy="300" r="60"/><circle cx="300" cy="300" r="120"/><circle cx="300" cy="300" r="180"/><circle cx="300" cy="300" r="240"/><circle cx="300" cy="300" r="300"/><circle cx="300" cy="300" r="360"/></svg></div>
+<div class="frame tile" id="tile-foyer"><img class="pat" src="../patterns/tile-foyer.svg"></div>
+<div class="frame tile" id="tile-argyle"><img class="pat" src="../patterns/argyle-atomic-600.svg"></div>
+<div class="frame tile" id="tile-lattice"><img class="pat" src="../patterns/tile-lattice.svg"></div>
+</body></html>

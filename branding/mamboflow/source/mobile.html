@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Bodoni Moda";src:url(../fonts/BodoniModa-Variable.ttf);font-weight:400 900}
+@font-face{font-family:"Bodoni Moda";src:url(../fonts/BodoniModa-Italic-Variable.ttf);font-weight:400 900;font-style:italic}
+@font-face{font-family:Inter;src:url(../fonts/Inter-Variable.ttf);font-weight:100 900}
+:root{--paper:#fbfbf8;--ink:#101114;--muted:#5f6166;--line:rgba(16,17,20,.22);--mustard:#e2b03a}
+body{margin:0;background:#888;font-family:Inter;color:var(--ink)}
+#m{position:relative;width:390px;height:844px;background:var(--paper);overflow:hidden}
+#m .paper{position:absolute;left:0;top:0;width:100%;height:360px;overflow:hidden}
+#m .paper img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#m .dog{position:absolute;left:52px;top:96px;width:300px}
+#m .wall{position:absolute;left:-120px;right:-120px;top:318px;height:700px;background:var(--paper);border-radius:50% 50% 0 0 / 170px 170px 0 0}
+.wm{font-family:"Bodoni Moda";font-weight:500;letter-spacing:-.035em;margin:0}
+.wm em{font-style:italic}
+#m .lk{position:absolute;left:0;right:0;top:396px;justify-content:center}
+#m .spark{position:absolute;left:300px;top:380px;width:16px}
+#m .by{font-size:9px;letter-spacing:.24em;text-transform:uppercase;font-weight:650}
+/* the lockup component: mark = 1.25 x cap height, centred on the caps; endorsement under the wordmark */
+.lk{--F:44px;display:flex;align-items:flex-start;gap:calc(var(--F)*.24)}
+.lk>img{display:block;height:calc(var(--F)*.94);width:auto;margin-top:calc(var(--F)*.02)}
+.lk .wm{font-size:var(--F);line-height:1;white-space:nowrap}
+.lk .by{margin:calc(var(--F)*.18) 0 0 calc(var(--F)*.04)}
+
+#m .tag{position:absolute;left:0;right:0;top:514px;text-align:center;font-family:"Bodoni Moda";font-size:22px;letter-spacing:-.01em;color:var(--ink)}
+#m .btn{position:absolute;left:28px;right:28px;height:52px;display:flex;align-items:center;justify-content:center;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:650}
+#m .b1{top:586px;background:var(--ink);color:#fff}
+#m .b2{top:652px;border:1px solid var(--ink)}
+#m .foot{position:absolute;left:0;right:0;top:750px;display:grid;justify-items:center;gap:8px}
+#m .foot img{width:16px}
+#m .foot i{display:block;width:1px;height:30px;background:var(--line)}
+</style></head><body>
+<div id="m">
+ <div class="paper"><img src="../patterns/argyle-atomic-fine.svg"></div>
+ <img class="dog" src="../mascot/mambo-peek-up.png">
+ <div class="wall"></div>
+ <img class="spark" src="../patterns/spark-mustard.svg">
+ <div class="lk" style="--F:50px"><img src="../igc/igc-mark-black.png" alt=""><div><h3 class="wm">Mambo<em>Flow</em></h3><p class="by">By In Good Company</p></div></div>
+ <div class="tag">Social, in good company.</div>
+ <div class="btn b1">Get started</div>
+ <div class="btn b2">Sign in</div>
+ <div class="foot"><img src="../patterns/spark-mustard.svg"><i></i></div>
+</div></body></html>
