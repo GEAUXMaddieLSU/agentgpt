@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Bodoni Moda";src:url(../fonts/BodoniModa-Variable.ttf);font-weight:400 900}
+@font-face{font-family:"Bodoni Moda";src:url(../fonts/BodoniModa-Italic-Variable.ttf);font-weight:400 900;font-style:italic}
+@font-face{font-family:Inter;src:url(../fonts/Inter-Variable.ttf);font-weight:100 900}
+:root{--paper:#fbfbf8;--ink:#101114;--line:rgba(16,17,20,.22)}
+body{margin:0;background:#888;font-family:Inter;color:var(--ink)}
+.frame{position:relative;overflow:hidden;background:var(--paper);margin:24px}
+.frame.t{background:transparent}
+.frame.ink{background:var(--ink);color:#fff}
+.panel{position:absolute;overflow:hidden;background:var(--paper);border:6px solid var(--paper);outline:1px solid var(--line)}
+.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+img.m{position:absolute;display:block}
+.wm{font-family:"Bodoni Moda";font-weight:500;letter-spacing:-.035em;line-height:1;margin:0;white-space:nowrap}
+.wm em{font-style:italic}
+.by{font-weight:650;text-transform:uppercase;letter-spacing:.26em;margin:0}
+.mark{position:absolute;display:block}
+.spark{position:absolute;display:block}
+/* primary: Mambo + panel | mark | wordmark over endorsement */
+#p{width:1600px;height:520px}
+#p .panel{left:0;top:60px;width:340px;height:400px}
+#p img.m{left:10px;top:30px;width:330px}
+#p .mark{left:400px;top:150px;height:170px}
+#p .wm{position:absolute;left:600px;top:118px;font-size:200px}
+#p .by{position:absolute;left:608px;top:346px;font-size:19px}
+#p .spark{left:1534px;top:132px;width:34px}
+/* reversed */
+#r{width:1600px;height:520px}
+#r .panel{left:0;top:60px;width:340px;height:400px}
+#r img.m{left:10px;top:30px;width:330px}
+#r .mark{left:400px;top:150px;height:170px}
+#r .wm{position:absolute;left:600px;top:118px;font-size:200px;color:#fff}
+#r .by{position:absolute;left:608px;top:346px;font-size:19px;color:#fff}
+#r .spark{left:1534px;top:132px;width:34px}
+/* stacked */
+#s{width:1000px;height:1040px}
+#s .panel{left:320px;top:40px;width:360px;height:420px}
+#s img.m{left:330px;top:14px;width:340px}
+#s .mark{left:118px;top:558px;height:130px}
+#s .wm{position:absolute;left:272px;top:536px;font-size:150px}
+#s .by{position:absolute;left:0;right:0;top:720px;text-align:center;font-size:17px}
+#s .spark{left:862px;top:548px;width:28px}
+/* small test: lockup at 320px wide */
+#small{width:560px;height:200px;display:grid;place-items:center}
+#small img{width:320px}
+</style></head><body>
+<div class="frame t" id="p"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-pop-teal.png"><img class="mark" src="../igc/igc-mark-black.png"><h1 class="wm">Mambo<em>Flow</em></h1><p class="by">By In Good Company</p><img class="spark" src="../patterns/spark-mustard.svg"></div>
+<div class="frame ink" id="r"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-pop-teal.png"><img class="mark" src="../igc/igc-mark-white.png"><h1 class="wm">Mambo<em>Flow</em></h1><p class="by">By In Good Company</p><img class="spark" src="../patterns/spark-mustard.svg"></div>
+<div class="frame t" id="s"><div class="panel"><img src="../patterns/argyle-atomic-fine.svg"></div><img class="m" src="../mascot/mambo-pop-teal.png"><img class="mark" src="../igc/igc-mark-black.png"><h1 class="wm">Mambo<em>Flow</em></h1><p class="by">By In Good Company</p><img class="spark" src="../patterns/spark-mustard.svg"></div>
+</body></html>

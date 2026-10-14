@@ -9,12 +9,17 @@ body{margin:0;background:#888;font-family:Inter;color:var(--ink)}
 #m .paper img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 #m .dog{position:absolute;left:52px;top:96px;width:300px}
 #m .wall{position:absolute;left:-120px;right:-120px;top:318px;height:700px;background:var(--paper);border-radius:50% 50% 0 0 / 170px 170px 0 0}
-#m .wm{position:absolute;left:0;right:0;top:396px;text-align:center;font-family:"Bodoni Moda";font-weight:500;font-size:54px;letter-spacing:-.035em;line-height:.9;margin:0}
-#m .wm em{font-style:italic}
-#m .spark{position:absolute;left:236px;top:372px;width:22px}
-#m .endorse{position:absolute;left:0;right:0;top:456px;display:flex;justify-content:center;align-items:center;gap:10px}
-#m .endorse img{height:24px}
-#m .by{margin:0;font-size:9px;letter-spacing:.24em;text-transform:uppercase;font-weight:650}
+.wm{font-family:"Bodoni Moda";font-weight:500;letter-spacing:-.035em;margin:0}
+.wm em{font-style:italic}
+#m .lk{position:absolute;left:0;right:0;top:396px;justify-content:center}
+#m .spark{position:absolute;left:300px;top:380px;width:16px}
+#m .by{font-size:9px;letter-spacing:.24em;text-transform:uppercase;font-weight:650}
+/* the lockup component: mark = 1.25 x cap height, centred on the caps; endorsement under the wordmark */
+.lk{--F:44px;display:flex;align-items:flex-start;gap:calc(var(--F)*.24)}
+.lk>img{display:block;height:calc(var(--F)*.94);width:auto;margin-top:calc(var(--F)*.02)}
+.lk .wm{font-size:var(--F);line-height:1;white-space:nowrap}
+.lk .by{margin:calc(var(--F)*.18) 0 0 calc(var(--F)*.04)}
+
 #m .tag{position:absolute;left:0;right:0;top:514px;text-align:center;font-family:"Bodoni Moda";font-size:22px;letter-spacing:-.01em;color:var(--ink)}
 #m .btn{position:absolute;left:28px;right:28px;height:52px;display:flex;align-items:center;justify-content:center;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:650}
 #m .b1{top:586px;background:var(--ink);color:#fff}
@@ -28,8 +33,7 @@ body{margin:0;background:#888;font-family:Inter;color:var(--ink)}
  <img class="dog" src="../mascot/mambo-peek-up.png">
  <div class="wall"></div>
  <img class="spark" src="../patterns/spark-mustard.svg">
- <h1 class="wm">Mambo<em>Flow</em></h1>
- <div class="endorse"><img src="../igc/igc-mark-black.png"><p class="by">By In Good Company</p></div>
+ <div class="lk" style="--F:50px"><img src="../igc/igc-mark-black.png" alt=""><div><h3 class="wm">Mambo<em>Flow</em></h3><p class="by">By In Good Company</p></div></div>
  <div class="tag">Social, in good company.</div>
  <div class="btn b1">Get started</div>
  <div class="btn b2">Sign in</div>

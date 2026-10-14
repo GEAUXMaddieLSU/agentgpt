@@ -22,7 +22,7 @@ In Good Company is the parent brand. MamboFlow is an endorsed product. It carrie
 | `mascot/mambo-classic.png` | Quiet treatment, no color. Documents and print. |
 | `mascot/mambo-ink.png` | Full watercolor shading in grayscale. Large editorial use. |
 | `mascot/mambo-stamp.png` | Pure two-tone. Favicons, sizes under 64 px. |
-| `lockups/lock-primary.png`, `lock-stacked.png` | Transparent lockups: the panel, Mambo, wordmark, and the In Good Company mark beside the endorsement line. |
+| `lockups/lock-primary.png`, `lock-stacked.png` | Transparent lockups: Mambo on his panel, the In Good Company mark at capital height, the wordmark, the endorsement beneath. |
 | `lockups/lock-rev.png` | Reversed lockup on ink. |
 | `social/avatar.png`, `avatar-dark.png` | Profile avatars, 400 x 400. |
 | `social/header.png` | X header, 1500 x 500. |
@@ -44,7 +44,7 @@ In Good Company is the parent brand. MamboFlow is an endorsed product. It carrie
 
 - Mambo's coat is black and white. The collar is the only color on him; the charm is always gold.
 - The paper appears only inside a framed panel behind Mambo, bordered in paper white with a hairline edge. He overlaps its edges. Never tile it behind type.
-- Lockup order never changes: Mambo and panel, wordmark, then the IGC mark beside the endorsement line. The mark is black on light grounds, white on ink, never recolored, never inside the paper, never below 16 px.
+- The lockup, in order: Mambo on his panel, the In Good Company mark, the wordmark, the endorsement beneath. The mark is 1.25 x the capital height, centered on the capitals, with a gap of a third of the capital height before the wordmark. The endorsement hangs under the wordmark, left-aligned, just under half a capital height below the baseline. One mustard sparkle at the top right of the w. The mark is black on light grounds, white on ink, never recolored, never inside the paper, never below 16 px. `source/lockv3.html` and `source/render-v3.js` place these from measured type metrics.
 - Wordmark: Bodoni Moda 500, tracking -0.035em, "Mambo" upright and "Flow" italic.
 - Endorsement: Inter 650, uppercase, 0.24em tracking. Legal name in contracts and footers: In Good Company Impact Studio, LLC.
 - Clear space equals the height of the capital M on every side. Minimum primary lockup width on screen: 220 px.
@@ -52,6 +52,8 @@ In Good Company is the parent brand. MamboFlow is an endorsed product. It carrie
 - No em dashes, no emoji, no contractions in documents or product screens. Social captions may use contractions.
 
 ## Confirmed
+
+- The lockup layout: Mambo and panel, mark, wordmark, endorsement beneath (October 14, 2026). Bodoni Moda wordmark, not a script.
 
 - The In Good Company mark: supplied by Maddie on October 14, 2026, and set beside the endorsement line everywhere.
 
