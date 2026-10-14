@@ -6,7 +6,7 @@
 @font-face{font-family:Inter;src:url(../fonts/Inter-Variable.ttf) format("truetype");font-weight:100 900;font-display:swap}
 :root{
   --paper:#fbfbf8;--soft:#f0f0ec;--stone:#e7e7e2;--ink:#101114;--muted:#5f6166;--line:rgba(16,17,20,.22);--on-ink:#ffffff;
-  --mambo:#d6a026;--paper-fixed:#fbfbf8;--ink-fixed:#101114;
+  --mambo:#e2b03a;--teal:#3fa9a6;--paper-fixed:#fbfbf8;--ink-fixed:#101114;
   --serif:"Bodoni Moda",Didot,"Bodoni 72","Bodoni MT",Georgia,"Times New Roman",serif;
   --sans:Inter,"Segoe UI",ui-sans-serif,system-ui,Helvetica,Arial,sans-serif;
 }
@@ -98,32 +98,35 @@ section.first{border-top:0}
 footer{padding-block:40px 60px;border-top:1px solid var(--line);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
 a{color:var(--ink)}
 @media (prefers-reduced-motion:no-preference){.plate img{transition:transform .22s ease}}
-</style>
 
+.strip{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;margin-top:12px}
+@media (max-width:700px){.strip{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.strip div{aspect-ratio:1;border:1px solid var(--line);display:flex;align-items:flex-end;padding:8px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;line-height:1.4}
+</style>
 <div class="wrap">
 
 <section class="first cover">
   <div>
     <div class="eyebrow">In Good Company Impact Studio · Product brand</div>
     <h1 class="wm" style="margin-top:18px">Mambo<em>Flow</em></h1>
-    <p class="lead">MamboFlow is the In Good Company tool for getting social. Mambo is its face. This board shows how the dog, the wordmark, and the studio share one brand umbrella, and what to decide before the files go final.</p>
+    <p class="lead">MamboFlow is the In Good Company tool for getting social. Mambo is its face. He stays black and white, with a teal collar and a gold charm, and a framed piece of Maddie's own ceiling paper peeks out from behind him. The studio holds the line; the dog brings the fun.</p>
     <div class="by byline">By In Good Company</div>
   </div>
   <div>
-    <div class="plate"><img src="img/lock-primary.png" alt="MamboFlow primary lockup: Mambo the French bulldog in black and white beside the MamboFlow wordmark and the line By In Good Company" width="1420" height="420"></div>
-    <div class="cap"><b>Primary lockup</b><span>Proposed</span></div>
+    <div class="plate"><img src="img/lock-primary.png" alt="MamboFlow primary lockup: Mambo in front of a framed argyle atomic panel, beside the MamboFlow wordmark, the line By In Good Company, and a slot for the In Good Company mark" width="1420" height="420"></div>
+    <div class="cap"><b>Primary lockup</b><span>Draft two · IGC mark pending</span></div>
   </div>
 </section>
 
 <section>
   <div class="head">
     <div><div class="eyebrow">Brand architecture</div><h2>One umbrella. Two voices.</h2></div>
-    <p>In Good Company is the parent. MamboFlow is an endorsed product: it carries the studio name on every surface, borrows the studio's type and black-and-white discipline, and adds the warmth a social tool needs.</p>
+    <p>In Good Company is the parent. MamboFlow is an endorsed product: it carries the studio name and mark on every surface, borrows the studio's type and black-and-white discipline, and adds the warmth a social tool needs.</p>
   </div>
   <div class="arch">
     <div class="box">
       <div class="eyebrow">Parent brand</div>
-      <div class="slot"><i></i><span>Swirl mark, supplied file only</span></div>
+      <div class="slot"><i></i><span>Circle mark, supplied file only</span></div>
       <div class="name">In Good Company</div>
       <p style="font-size:15px">Strategy + Generosity + Impact + AI Innovation. Black and white, Bodoni Moda and Inter, square corners, hairlines, generous space.</p>
     </div>
@@ -132,71 +135,77 @@ a{color:var(--ink)}
       <div class="eyebrow">Endorsed product</div>
       <div class="mini"><img src="img/fav.png" alt="" width="128" height="128"><div class="name wm">Mambo<em>Flow</em></div></div>
       <div class="by">By In Good Company</div>
-      <p style="font-size:15px">Same type, same palette, same rules. Plus Mambo, a mid-century pattern language, and one accent color reserved for product surfaces.</p>
+      <p style="font-size:15px">Same type, same palette, same rules. Plus Mambo, the argyle atomic panel, and two patterns lifted from Maddie's own home.</p>
     </div>
   </div>
   <div class="cols" style="margin-top:clamp(32px,5vw,64px)">
     <div><h3>MamboFlow inherits</h3><ul><li>Bodoni Moda for display, Inter for everything else</li><li>Black and white as the base. Paper, stone, soft, ink</li><li>Square corners, 1px hairlines, no shadows, no gradients</li><li>The voice principle: expertise without distance</li><li>The sign-off: You're in good company.</li></ul></div>
-    <div><h3>MamboFlow adds</h3><ul><li>Mambo, drawn in black and white only</li><li>Three mid-century patterns: Signal, Atomic, Boomerang</li><li>Mambo Mustard, one accent, product surfaces only, never on studio materials</li><li>Shorter, lighter lines. Social captions may use contractions</li><li>A wordmark where only the word Flow moves</li></ul></div>
+    <div><h3>MamboFlow adds</h3><ul><li>Mambo, black and white, with a teal collar and a gold charm</li><li>The argyle atomic panel: a framed piece of the ceiling paper, the only place the full palette lives</li><li>Foyer and Signal patterns for dark and light grounds</li><li>Shorter, lighter lines. Social captions may use contractions</li><li>A wordmark where only the word Flow moves</li></ul></div>
   </div>
 </section>
 
 <section>
   <div class="head">
-    <div><div class="eyebrow">The mascot</div><h2>Meet Mambo, in black and white.</h2></div>
-    <p>The watercolor Frenchie keeps every line and all of his charm. Color leaves. The cream body becomes paper white, the teal collar becomes a quiet gray, and he now sits comfortably next to the studio logo without competing with it.</p>
+    <div><div class="eyebrow">The mascot</div><h2>Meet Mambo. Black and white, one pop.</h2></div>
+    <p>The watercolor keeps every line and all of his charm. The cream coat becomes paper white. The collar keeps its teal, the charm goes gold, and that is all the color he ever wears.</p>
   </div>
   <div class="grid g2">
     <div><div class="plate"><img src="img/mambo-original-600.webp" alt="Original color watercolor of Mambo" width="600" height="795"></div><div class="cap"><b>Before</b><span>Watercolor, cream and teal</span></div></div>
-    <div><div class="plate"><img src="img/mambo-classic-900.webp" alt="Mambo in the Classic black-and-white treatment" width="900" height="1193"></div><div class="cap"><b>After · Classic</b><span>Recommended default</span></div></div>
+    <div><div class="plate"><img src="img/mambo-pop-teal-900.webp" alt="Mambo in black and white with a teal collar and gold charm" width="900" height="1193"></div><div class="cap"><b>After · Pop</b><span>In use everywhere</span></div></div>
   </div>
-  <div class="grid g4" style="margin-top:clamp(16px,2.4vw,34px)">
-    <div><div class="plate"><img src="img/mambo-ink-900.webp" alt="Mambo, Ink treatment with full watercolor shading" width="900" height="1193"></div><div class="cap"><b>Ink</b><span>Large editorial use</span></div></div>
-    <div><div class="plate"><img src="img/mambo-stamp-900.webp" alt="Mambo, Stamp treatment in pure black and white" width="900" height="1193"></div><div class="cap"><b>Stamp</b><span>Favicon, small sizes, print</span></div></div>
-    <div><div class="plate ink"><img src="img/mambo-classic-sticker-900.webp" alt="Mambo, Sticker treatment with a white keyline on black" width="900" height="1193"></div><div class="cap"><b>Sticker</b><span>Dark grounds</span></div></div>
-    <div><div class="plate"><img src="img/mambo-spot-mustard-900.webp" alt="Mambo, Classic treatment with the collar in Mambo Mustard" width="900" height="1193"></div><div class="cap"><b>Spot</b><span>Optional, accent on the collar only</span></div></div>
+  <div class="plate" style="margin-top:clamp(16px,2.4vw,34px)"><img src="img/collar-options.png" alt="Four collar colors on Mambo: teal, pink, mustard, red, each with the gold charm" width="1680" height="480"></div>
+  <div class="cap"><b>Collar options</b><span>Teal in use · pink, mustard, red available</span></div>
+  <div class="grid g3" style="margin-top:clamp(16px,2.4vw,34px)">
+    <div><div class="plate"><img src="img/mambo-classic-900.webp" alt="Mambo, Classic treatment with no color" width="900" height="1193"></div><div class="cap"><b>Quiet</b><span>Documents, print, no color</span></div></div>
+    <div><div class="plate"><img src="img/mambo-stamp-900.webp" alt="Mambo, Stamp treatment in pure black and white" width="900" height="1193"></div><div class="cap"><b>Stamp</b><span>Favicon, under 64px</span></div></div>
+    <div><div class="plate ink"><img src="img/mambo-pop-teal-sticker-900.webp" alt="Mambo, Sticker treatment with a white keyline on black" width="900" height="1193"></div><div class="cap"><b>Sticker</b><span>Dark grounds</span></div></div>
   </div>
   <ul class="rows" style="margin-top:clamp(32px,5vw,64px)">
-    <li><b>Always</b><span>Mambo is black and white. The collar is the only place color may ever live, and only on MamboFlow surfaces.</span></li>
-    <li><b>Never</b><span>Recolor his coat, add effects, flip him so the tag reads backward, or crop below the collar in a lockup.</span></li>
+    <li><b>Always</b><span>His coat is black and white. The collar is the only color on him, and the charm is always gold.</span></li>
+    <li><b>Never</b><span>Recolor his coat, add effects, flip him so the charm reads backward, or crop below the collar in a lockup.</span></li>
     <li><b>Small sizes</b><span>Use Stamp below 64px. The head alone is the avatar. The full body is for lockups and posts.</span></li>
   </ul>
 </section>
 
 <section>
   <div class="head">
-    <div><div class="eyebrow">The lockups</div><h2>The dog, the word, the studio.</h2></div>
-    <p>Every lockup reads in the same order: Mambo, the MamboFlow wordmark, then the endorsement line. The studio is named on every surface, so a single post or a tiny icon still points back to In Good Company.</p>
+    <div><div class="eyebrow">The lockups</div><h2>The dog, the panel, the word, the studio.</h2></div>
+    <p>Every lockup reads in the same order: Mambo in front of his panel, the MamboFlow wordmark, the endorsement line, then the In Good Company mark. The panel is bordered in paper white, the way the real ceiling sits inside its trim.</p>
   </div>
   <div class="grid g2">
-    <div><div class="plate"><img src="img/lock-stacked.png" alt="Stacked lockup: Mambo above the MamboFlow wordmark and endorsement" width="960" height="720"></div><div class="cap"><b>Stacked</b><span>Square and tall spaces</span></div></div>
-    <div><div class="plate ink flush"><img src="img/lock-rev.png" alt="Reversed lockup on black with the Sticker treatment" width="1420" height="420"></div><div class="cap"><b>Reversed</b><span>Ink grounds, Sticker treatment</span></div></div>
+    <div><div class="plate"><img src="img/lock-stacked.png" alt="Stacked lockup: Mambo and his panel above the wordmark, endorsement, and mark slot" width="960" height="760"></div><div class="cap"><b>Stacked</b><span>Square and tall spaces</span></div></div>
+    <div><div class="plate ink flush"><img src="img/lock-rev.png" alt="Reversed lockup on black: the panel stays light, the type goes white" width="1420" height="420"></div><div class="cap"><b>Reversed</b><span>Ink grounds</span></div></div>
   </div>
   <div class="grid g4" style="margin-top:clamp(16px,2.4vw,34px)">
-    <div><div class="plate flush"><img src="img/avatar.png" alt="Profile avatar, Mambo's head on paper" width="400" height="400"></div><div class="cap"><b>Avatar</b><span>400 × 400</span></div></div>
-    <div><div class="plate flush"><img src="img/avatar-dark.png" alt="Profile avatar, Mambo's head on black" width="400" height="400"></div><div class="cap"><b>Avatar, dark</b><span>400 × 400</span></div></div>
-    <div><div class="plate flush"><img src="img/icon.png" alt="App icon on paper with a 2px inner frame" width="512" height="512"></div><div class="cap"><b>App icon</b><span>512 × 512</span></div></div>
+    <div><div class="plate flush"><img src="img/avatar.png" alt="Profile avatar: Mambo's head in front of the panel on paper" width="400" height="400"></div><div class="cap"><b>Avatar</b><span>400 × 400</span></div></div>
+    <div><div class="plate flush"><img src="img/avatar-dark.png" alt="Profile avatar on black" width="400" height="400"></div><div class="cap"><b>Avatar, dark</b><span>400 × 400</span></div></div>
+    <div><div class="plate flush"><img src="img/icon.png" alt="App icon on paper" width="512" height="512"></div><div class="cap"><b>App icon</b><span>512 × 512</span></div></div>
     <div><div class="plate flush"><img src="img/icon-dark.png" alt="App icon on black" width="512" height="512"></div><div class="cap"><b>App icon, dark</b><span>512 × 512</span></div></div>
   </div>
   <ul class="rows" style="margin-top:clamp(32px,5vw,64px)">
+    <li><b>The panel</b><span>The paper appears only inside a framed panel behind Mambo, roughly square, with a paper-white border and a hairline edge. He always overlaps its edges. Never tile the paper edge to edge behind type.</span></li>
     <li><b>Clear space</b><span>The height of the capital M in the wordmark on every side. Minimum primary lockup width on screen: 220px.</span></li>
-    <li><b>Endorsement</b><span>By In Good Company, set in Inter at 650 weight, uppercase, 0.24em tracking. Contracts and footers use the legal name: In Good Company Impact Studio, LLC.</span></li>
-    <li><b>Swirl mark</b><span>The studio mark joins the lockup only as the supplied file, never redrawn. It sits to the far right of the endorsement line at the same height as the capital M. <span class="tag">Confirm</span></span></li>
+    <li><b>Endorsement</b><span>By In Good Company, Inter 650, uppercase, 0.24em tracking. Contracts and footers use the legal name: In Good Company Impact Studio, LLC.</span></li>
+    <li><b>IGC mark</b><span>The studio's circle mark joins the lockup only as the supplied file, never redrawn. It sits below the endorsement line at the height shown by the dashed slot. <span class="tag">File pending</span></span></li>
   </ul>
 </section>
 
 <section>
   <div class="head">
-    <div><div class="eyebrow">Color and type</div><h2>Black, white, and one honest yellow.</h2></div>
-    <p>The palette is the studio's own. Mambo Mustard is the single addition: a mid-century yellow, used on one shape per surface, at most a tenth of any composition, and never on studio materials.</p>
+    <div><div class="eyebrow">Color and type</div><h2>Black, white, and the ceiling.</h2></div>
+    <p>The base palette is the studio's own. The full color lives in exactly one place: the argyle atomic panel. Outside the panel, two flat accents are allowed as a single shape: Collar Teal and Mambo Mustard, both pulled from the paper.</p>
   </div>
   <div class="sw">
     <div style="background:#fbfbf8;color:#101114"><span class="n">Paper</span><span>#FBFBF8</span></div>
     <div style="background:#f0f0ec;color:#101114"><span class="n">Soft</span><span>#F0F0EC</span></div>
     <div style="background:#e7e7e2;color:#101114"><span class="n">Stone</span><span>#E7E7E2</span></div>
-    <div style="background:#5f6166;color:#fff"><span class="n">Muted</span><span>#5F6166</span></div>
     <div style="background:#101114;color:#fff"><span class="n">Ink</span><span>#101114</span></div>
-    <div style="background:#d6a026;color:#101114"><span class="n">Mambo Mustard</span><span>#D6A026 · product only</span></div>
+    <div style="background:#3fa9a6;color:#101114"><span class="n">Collar Teal</span><span>#3FA9A6 · one shape</span></div>
+    <div style="background:#e2b03a;color:#101114"><span class="n">Mambo Mustard</span><span>#E2B03A · one shape</span></div>
+  </div>
+  <div class="eyebrow" style="margin-top:28px">The paper · inside the panel only · sampled from the ceiling, confirm against the roll</div>
+  <div class="strip">
+    <div style="background:#d94b80;color:#fff">Pink</div><div style="background:#e2563f;color:#fff">Red</div><div style="background:#2ea39f;color:#fff">Teal</div><div style="background:#e2b03a;color:#101114">Mustard</div><div style="background:#a9c6cd;color:#101114">Powder</div><div style="background:#e68aa3;color:#101114">Rose</div><div style="background:#f2eee2;color:#101114">Cream</div><div style="background:#c9a26b;color:#101114">Tan line</div>
   </div>
   <div class="spec" style="margin-top:clamp(32px,5vw,64px)">
     <div class="big wm">Mambo<em>Flow</em></div>
@@ -212,39 +221,40 @@ a{color:var(--ink)}
 <section>
   <div class="head">
     <div><div class="eyebrow">Pattern language</div><h2>Funky backgrounds, strict rules.</h2></div>
-    <p>Three mid-century patterns carry the fun so Mambo and the type can stay classic. Each is built from the brand's own hairlines and flat shapes. Signal is the default: concentric rings that read as a post going out into the world.</p>
+    <p>Two of the four patterns come straight from Maddie's house: the foyer tile and the ceiling paper. Signal is the quiet default. Lattice is the paper's geometry with the color removed, for documents.</p>
   </div>
-  <div class="grid g3">
-    <div><div class="plate flush"><img src="img/tile-signal.png" alt="Signal pattern: concentric hairline rings" width="600" height="600"></div><div class="cap"><b>Signal</b><span>Default, behind Mambo</span></div></div>
-    <div><div class="plate flush"><img src="img/tile-atomic.png" alt="Atomic pattern: starbursts and dots" width="600" height="600"></div><div class="cap"><b>Atomic</b><span>Announcements, dark grounds</span></div></div>
-    <div><div class="plate flush"><img src="img/tile-boom.png" alt="Boomerang pattern: flat kidney shapes in stone, ink, and mustard" width="600" height="600"></div><div class="cap"><b>Boomerang</b><span>Quotes, light grounds</span></div></div>
+  <div class="grid g4">
+    <div><div class="plate flush"><img src="img/tile-signal.png" alt="Signal pattern: concentric hairline rings" width="600" height="600"></div><div class="cap"><b>Signal</b><span>Default, light grounds</span></div></div>
+    <div><div class="plate flush"><img src="img/tile-foyer.png" alt="Foyer pattern: black hexagons with white rays, from the foyer tile" width="600" height="600"></div><div class="cap"><b>Foyer</b><span>Dark grounds</span></div></div>
+    <div><div class="plate flush"><img src="img/tile-argyle.png" alt="Argyle atomic: the ceiling paper redrawn in its colors" width="600" height="600"></div><div class="cap"><b>Argyle Atomic</b><span>Inside the panel only</span></div></div>
+    <div><div class="plate flush"><img src="img/tile-lattice.png" alt="Lattice: the paper's circle geometry in hairlines with two lit cells" width="600" height="600"></div><div class="cap"><b>Lattice</b><span>Documents, two lit cells at most</span></div></div>
   </div>
   <ul class="rows" style="margin-top:clamp(32px,5vw,64px)">
-    <li><b>One per surface</b><span>Never mix patterns. Pick one and let it breathe.</span></li>
+    <li><b>One per surface</b><span>Never mix patterns. The panel counts as one.</span></li>
     <li><b>Placement</b><span>Behind Mambo or beside a headline. Never behind body copy.</span></li>
-    <li><b>Weight</b><span>Stone on paper for calm. Ink for bold. Mustard on a single shape, or not at all.</span></li>
+    <li><b>Weight</b><span>Signal and Lattice in stone or hairline ink. Foyer at reduced opacity on ink. Argyle at full color, only inside the panel.</span></li>
   </ul>
 </section>
 
 <section>
   <div class="head">
     <div><div class="eyebrow">In the wild</div><h2>Mambo's digital presence.</h2></div>
-    <p>The X profile is the anchor. Everything else, from the sign-in screen to a post template to the email signature, is positioned from there so the studio logo and the dog always appear together.</p>
+    <p>The X profile is the anchor. Everything else, from the sign-in screen to a post template to the email signature, is positioned from there so the studio and the dog always appear together. Headlines on the posts are placeholder copy for Maddie to rewrite.</p>
   </div>
   <div class="xpad">
     <div class="xmock">
-      <img class="hd" src="img/header.png" alt="X header: MamboFlow wordmark, endorsement line, tagline, and Mambo sitting on Signal rings" width="1500" height="500">
+      <img class="hd" src="img/header.png" alt="X header: MamboFlow wordmark, endorsement line, and Mambo in front of his panel" width="1500" height="500">
       <div class="av"><img src="img/avatar.png" alt="" width="400" height="400"></div>
       <div class="nm"><b>MamboFlow</b><span>@mmdevenney · By In Good Company</span></div>
     </div>
   </div>
   <div class="cap" style="margin-top:8px"><b>X profile</b><span>Header 1500 × 500 · Avatar 400 × 400 · Account @mmdevenney</span></div>
   <div class="grid g2" style="margin-top:clamp(24px,3vw,44px)">
-    <div><div class="plate flush"><img src="img/post-quote.png" alt="Social post template on paper with the Boomerang pattern: Social, in good company." width="1080" height="1080"></div><div class="cap"><b>Post · Quote card</b><span>1080 × 1080</span></div></div>
-    <div><div class="plate ink flush"><img src="img/post-announce.png" alt="Social post template on black with the Atomic pattern: Meet Mambo." width="1080" height="1080"></div><div class="cap"><b>Post · Announcement</b><span>1080 × 1080</span></div></div>
+    <div><div class="plate flush"><img src="img/post-quote.png" alt="Post template on paper: headline left, Mambo and his panel right" width="1080" height="1080"></div><div class="cap"><b>Post · Light</b><span>1080 × 1080</span></div></div>
+    <div><div class="plate ink flush"><img src="img/post-announce.png" alt="Post template on black with the Foyer pattern: Meet Mambo." width="1080" height="1080"></div><div class="cap"><b>Post · Dark</b><span>1080 × 1080</span></div></div>
   </div>
   <div class="grid g2" style="margin-top:clamp(16px,2.4vw,34px);align-items:start">
-    <div><div class="plate flush"><img src="img/signin.png" alt="MamboFlow sign-in screen: black left panel with Signal rings and Mambo, paper form on the right" width="1440" height="900"></div><div class="cap"><b>App sign-in</b><span>Web, 1440 × 900</span></div></div>
+    <div><div class="plate flush"><img src="img/signin.png" alt="MamboFlow sign-in screen: black left panel with the Foyer pattern and Mambo, paper form on the right" width="1440" height="900"></div><div class="cap"><b>App sign-in</b><span>Web, 1440 × 900</span></div></div>
     <div><div class="plate flush"><img src="img/sig.png" alt="Email signature strip with Mambo, the wordmark, and contact details" width="600" height="140"></div><div class="cap"><b>Email signature</b><span>600 × 140</span></div></div>
   </div>
 </section>
@@ -252,35 +262,36 @@ a{color:var(--ink)}
 <section>
   <div class="head">
     <div><div class="eyebrow">Voice</div><h2>Shorter lines, same warmth.</h2></div>
-    <p>Mambo speaks the way the studio does, just with fewer words. Proposed lines below are drafts for your edit, not approved copy.</p>
+    <p>Mambo speaks the way the studio does, just with fewer words. Lines below are placeholders for Maddie's rewrite, not approved copy.</p>
   </div>
   <ul class="rows">
-    <li><b>Tagline</b><span>Social, in good company. <span class="tag">Confirm</span></span></li>
-    <li><b>Sign-off</b><span>Get social. You're in good company. (Pairs the product with the approved studio sign-off.) <span class="tag">Confirm</span></span></li>
-    <li><b>Launch</b><span>Meet Mambo. The friendly face of MamboFlow, the studio's tool for getting social. <span class="tag">Confirm</span></span></li>
+    <li><b>Tagline</b><span>Social, in good company. <span class="tag">Placeholder</span></span></li>
+    <li><b>Sign-off</b><span>Get social. You're in good company. <span class="tag">Placeholder</span></span></li>
+    <li><b>Launch</b><span>Meet Mambo. <span class="tag">Placeholder</span></span></li>
     <li><b>Rules</b><span>No em dashes. No emoji on the web or in documents. Spoken scripts and social captions may use contractions; product screens and documents do not.</span></li>
   </ul>
 </section>
 
 <section>
   <div class="head">
-    <div><div class="eyebrow">Decisions</div><h2>Two calls, then the files go final.</h2></div>
-    <p>One is settled. Two remain. Reply with a number and a word.</p>
+    <div><div class="eyebrow">Decisions</div><h2>Settled, in use, and one file to drop in.</h2></div>
+    <p>What Maddie has confirmed, what is in use pending a word, and the one thing still missing.</p>
   </div>
   <div class="dec">
-    <div><div><h3>Accent color</h3><p><strong>Recommended: yes, Mambo Mustard on product surfaces only.</strong> The alternative is strict black and white everywhere, which is cleaner but colder in a social feed.</p></div></div>
-    <div><div><h3>Default treatment</h3><p><strong>Recommended: Classic.</strong> Stamp stays for favicons, small sizes, and print. Ink is for large editorial moments.</p></div></div>
-    <div><div><h3>Endorsement wording <span class="tag">Confirmed</span></h3><p><strong>MamboFlow by In Good Company.</strong> Confirmed by Maddie, October 14, 2026. The longer form, An In Good Company Impact Studio product, stays available for the website footer and legal pages.</p></div></div>
+    <div><div><h3>Endorsement wording <span class="tag">Confirmed</span></h3><p><strong>MamboFlow by In Good Company.</strong> Confirmed October 14, 2026. The longer form, An In Good Company Impact Studio product, stays available for the website footer and legal pages.</p></div></div>
+    <div><div><h3>The color pop <span class="tag">Confirmed</span></h3><p><strong>The argyle atomic panel behind Mambo, a teal collar, a gold charm.</strong> Confirmed October 14, 2026. Mambo's coat stays black and white.</p></div></div>
+    <div><div><h3>Collar color <span class="tag">In use</span></h3><p><strong>Teal, his original.</strong> Pink, mustard, and red are rendered above if you want to switch.</p></div></div>
+    <div><div><h3>In Good Company mark <span class="tag">File pending</span></h3><p><strong>The circle mark drops into the dashed slot in every lockup.</strong> This session could not read it from the design system's storage or Maddie's computer; it goes in the moment the PNG is shared.</p></div></div>
   </div>
   <div class="note" style="margin-top:clamp(24px,3vw,44px)">
-    <strong style="color:var(--ink)">To verify.</strong> The swirl mark and the primary studio logo files could not be read from the brand system or the OneDrive folder in this session, so the endorsement is set in type for now. Drop in the supplied mark and the lockups update without any other change. The X header and avatar are sized to the platform's current specs. [CONFIRM]
+    <strong style="color:var(--ink)">To verify.</strong> The paper's colors were sampled by eye from photographs under the chandelier; confirm against the roll or the manufacturer's swatch. The X header and avatar are sized to the platform's current specs. [CONFIRM]
   </div>
 </section>
 
 <footer>
   <span>MamboFlow · By In Good Company</span>
   <span>© 2026 In Good Company Impact Studio, LLC</span>
-  <span>Brand board, draft one · October 2026</span>
+  <span>Brand board, draft two · October 2026</span>
 </footer>
 
 </div>
